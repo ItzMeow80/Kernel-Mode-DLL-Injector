@@ -1,0 +1,11 @@
+# Build outputs
+x64/
+.vs/
+*.obj
+*.sys
+*.pdb
+*.pfx
+*.cer
+*.exp
+*.lib
+*.ipch
