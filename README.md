@@ -36,7 +36,6 @@ loader.cpp              console client - finds first thread of PID (Toolhelp32)
 testdll.cpp             test DLL - MessageBox on inject
 build_driver.cmd        cl /kernel + link (ntoskrnl.lib, x64, /DRIVER)
 code_signing.cmd        certreq self-signed CodeSigningCert + signtool
-cleanup_admin.cmd       full clean-up: service, certs, C:\KMI, testsigning off
 ```
 
 ## 🔨 Build (x64 only)
@@ -98,7 +97,6 @@ reboot choice, auto-PID): ask me to include it — the plain scripts are in the 
 ## 🧹 Clean-up (admin)
 
 ```
-cleanup_admin.cmd
 sc stop ModernInjector & sc delete ModernInjector
 certutil -delstore Root ModernInjectorTestCert
 certutil -delstore TrustedPublisher ModernInjectorTestCert
